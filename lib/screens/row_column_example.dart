@@ -11,9 +11,9 @@ class RowColumnExample extends StatelessWidget {
       5,
       6,
     ];
-
     final String description =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed risus sodales, pulvinar enim ut, mattis dui. Duis consectetur est nec metus gravida tincidunt. Suspendisse ultricies blandit sapien, eu rutrum risus elementum eget. Integer faucibus facilisis dolor quis auctor. Nullam purus velit, venenatis eu efficitur in, dictum et turpis. Proin.";
+
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -77,7 +77,7 @@ class RowColumnExample extends StatelessWidget {
                     (int testemonial) => Row(
                       children: <Widget>[
                         Text(
-                          testemonial.isEven ? '🤡' : '🙈',
+                          testemonial.isEven ? '🤡 ' : '🙈 ',
                           style: Theme.of(context).textTheme.headline3,
                         ),
                         Expanded(
@@ -85,6 +85,7 @@ class RowColumnExample extends StatelessWidget {
                             testemonial.isEven
                                 ? 'Clown said: Best app I have tried ever!'
                                 : 'Monkey said: I saw better apps!',
+                            style: Theme.of(context).textTheme.subtitle2,
                           ),
                         ),
                       ],
